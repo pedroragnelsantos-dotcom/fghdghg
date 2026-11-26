@@ -1,0 +1,280 @@
+/* Configurações Base e Alto Contraste */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fundo-pagina: #f1f5f9;
+    --fundo-cartao: #ffffff;
+    --cor-primaria: #1e3a8a;
+    --cor-texto: #0f172a;
+    --cor-texto-suave: #334155;
+    --cor-borda: #94a3b8;
+    --cor-foco: #2563eb;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fundo-pagina);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+/* Link de salto */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho e Menu */
+.cabecalho {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 5px solid #0f172a;
+}
+
+.cabecalho h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.subtitulo {
+    color: #e2e8f0;
+    font-size: 1.05rem;
+    margin-bottom: 1.4rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.menu a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Seções */
+.secao {
+    background-color: var(--fundo-cartao);
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.secao h2 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.instrucao {
+    color: var(--cor-texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+/* PLANTA BAIXA SIMPLIFICADA (CSS Grid) */
+.mapa-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: #e2e8f0;
+    padding: 1.5rem;
+    border: 3px solid #334155;
+    border-radius: 12px;
+}
+
+.ambiente {
+    background-color: #ffffff;
+    border: 2px solid #1e293b;
+    border-radius: 10px;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+}
+
+.simbolo {
+    font-size: 2rem;
+}
+
+.nome-local {
+    font-size: 1.15rem;
+    color: var(--cor-texto);
+}
+
+.setor-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #f1f5f9;
+    color: var(--cor-texto-suave);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Estilos de borda e destaque por setor (complementando símbolo e texto) */
+.area-entrada {
+    border-top: 6px solid #15803d;
+    background-color: #f0fdf4;
+}
+
+.area-secretaria,
+.area-professores {
+    border-top: 6px solid #1d4ed8;
+    background-color: #eff6ff;
+}
+
+.area-aula,
+.area-biblioteca {
+    border-top: 6px solid #b45309;
+    background-color: #fffbeb;
+}
+
+.area-patio,
+.area-refeitorio,
+.area-banheiro {
+    border-top: 6px solid #0f766e;
+    background-color: #f0fdfa;
+}
+
+/* Corredor ocupando as 3 colunas */
+.corredor {
+    grid-column: 1 / -1;
+    background-color: #334155;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+/* GRID DE DESCRIÇÕES DOS AMBIENTES */
+.grid-descricoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.card-info {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 5px solid var(--cor-primaria);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.card-info h3 {
+    font-size: 1.15rem;
+    color: var(--cor-texto);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-info p {
+    color: var(--cor-texto-suave);
+    font-size: 0.98rem;
+}
+
+/* Dicas de Orientação */
+.bloco-orientacao {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.lista-dicas {
+    padding-left: 1.4rem;
+}
+
+.lista-dicas li {
+    margin-bottom: 0.6rem;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.rodape p + p {
+    margin-top: 0.4rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    .mapa-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .grid-descricoes {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+    }
+
+    .secao {
+        padding: 1.35rem;
+    }
+}
