@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa da Escola — Guia de Localização Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Atalho para navegação por teclado -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+    <header class="cabecalho">
+        <div class="container">
+            <h1>Mapa Simplificado da Escola</h1>
+            <p class="subtitulo">Guia rápido para localizar os principais ambientes escolares com clareza e autonomia.</p>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#mapa">Mapa da Escola</a></li>
+                    <li><a href="#descricoes">Descrição dos Ambientes</a></li>
+                    <li><a href="#orientacoes">Dicas de Orientação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" class="container">
+
+        <!-- SEÇÃO 1: MAPA VISUAL SIMPLIFICADO -->
+        <section id="mapa" class="secao">
+            <h2>Planta Baixa Simplificada</h2>
+            <p class="instrucao">Os ambientes abaixo estão organizados conforme a distribuição física da escola, identificados por símbolo, nome e setor:</p>
+
+            <div class="mapa-container" role="region" aria-label="Mapa esquemático dos ambientes da escola">
+                
+                <!-- Bloco Administrativo / Acesso -->
+                <div class="ambiente area-entrada">
+                    <span class="simbolo" aria-hidden="true">🏫</span>
+                    <strong class="nome-local">Entrada</strong>
+                    <span class="setor-tag">Acesso Principal</span>
+                </div>
+
+                <div class="ambiente area-secretaria">
+                    <span class="simbolo" aria-hidden="true">🏢</span>
+                    <strong class="nome-local">Secretaria</strong>
+                    <span class="setor-tag">Setor Administrativo</span>
+                </div>
+
+                <div class="ambiente area-professores">
+                    <span class="simbolo" aria-hidden="true">👩‍🏫</span>
+                    <strong class="nome-local">Sala dos Professores</strong>
+                    <span class="setor-tag">Setor Pedagógico</span>
+                </div>
+
+                <!-- Corredor Central / Circulação -->
+                <div class="corredor" aria-label="Corredor central de circulação">
+                    <span>↔️ Corredor Principal de Acesso ↔️</span>
+                </div>
+
+                <!-- Bloco de Estudos -->
+                <div class="ambiente area-aula">
+                    <span class="simbolo" aria-hidden="true">📚</span>
+                    <strong class="nome-local">Sala de Aula</strong>
+                    <span class="setor-tag">Bloco de Ensino</span>
+                </div>
+
+                <div class="ambiente area-biblioteca">
+                    <span class="simbolo" aria-hidden="true">📖</span>
+                    <strong class="nome-local">Biblioteca</strong>
+                    <span class="setor-tag">Espaço de Leitura</span>
+                </div>
+
+                <!-- Bloco de Convivência e Apoio -->
+                <div class="ambiente area-patio">
+                    <span class="simbolo" aria-hidden="true">🌳</span>
+                    <strong class="nome-local">Pátio</strong>
+                    <span class="setor-tag">Área Aberta</span>
+                </div>
+
+                <div class="ambiente area-refeitorio">
+                    <span class="simbolo" aria-hidden="true">🍽️</span>
+                    <strong class="nome-local">Refeitório</strong>
+                    <span class="setor-tag">Alimentação</span>
+                </div>
+
+                <div class="ambiente area-banheiro">
+                    <span class="simbolo" aria-hidden="true">🚻</span>
+                    <strong class="nome-local">Banheiro</strong>
+                    <span class="setor-tag">Sanitários</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: DESCRIÇÃO DOS AMBIENTES -->
+        <section id="descricoes" class="secao">
+            <h2>Descrição dos Ambientes</h2>
+            <p class="instrucao">Confira a função e a localização de cada espaço indicado no mapa:</p>
+
+            <div class="grid-descricoes">
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">🏫</span> Entrada</h3>
+                    <p>Portão principal de acesso à escola, localizado na parte frontal do prédio, próximo à recepção.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">🏢</span> Secretaria</h3>
+                    <p>Setor responsável por matrículas, documentos escolares e atendimento ao público, logo à direita da entrada.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">👩‍🏫</span> Sala dos Professores</h3>
+                    <p>Espaço reservado aos docentes para planejamento de aulas e atendimento agendado, ao lado da secretaria.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">📚</span> Sala de Aula</h3>
+                    <p>Ambiente destinado às aulas teóricas e atividades diárias, acessível pelo corredor principal.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">📖</span> Biblioteca</h3>
+                    <p>Espaço silencioso para leitura, pesquisa e empréstimo de livros, situado ao lado das salas de aula.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">🌳</span> Pátio</h3>
+                    <p>Área ampla e aberta utilizada para convivência, intervalos e atividades culturais ao ar livre.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">🍽️</span> Refeitório</h3>
+                    <p>Espaço equipado com mesas e balcão para distribuição e consumo das refeições escolares, próximo ao pátio.</p>
+                </article>
+
+                <article class="card-info">
+                    <h3><span aria-hidden="true">🚻</span> Banheiro</h3>
+                    <p>Sanitários masculinos, femininos e acessíveis, localizados no setor de apoio próximo ao refeitório.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: DICAS DE ORIENTAÇÃO -->
+        <section id="orientacoes" class="secao bloco-orientacao">
+            <h2>Dicas de Orientação</h2>
+            <ul class="lista-dicas">
+                <li><strong>Ponto de referência:</strong> Ao passar pela <strong>Entrada</strong>, siga pelo corredor central para chegar rapidamente às salas e ao pátio.</li>
+                <li><strong>Dúvidas ou informações:</strong> Procure a <strong>Secretaria</strong> logo na entrada do prédio.</li>
+                <li><strong>Acessibilidade:</strong> Todos os ambientes do térreo contam com passagens amplas e sinalização visual.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Mapa Simplificado da Escola</strong> — Projeto de Acessibilidade Web</p>
+            <p>Desenvolvido com HTML5 e CSS3 • Hospedado no GitHub Pages</p>
+        </div>
+    </footer>
+</body>
+</html>
